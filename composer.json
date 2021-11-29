@@ -1,0 +1,39 @@
+{
+    "name": "mtkh/idempotency-handler",
+    "description": "Block the concurrent/duplicate requests based on specific timeout",
+    "keywords": [
+        "idempotency",
+        "laravel",
+        "middleware",
+        "throttle",
+        "api"
+    ],
+    "minimum-stability": "dev",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Matin Khajeh Khalili",
+            "email": "Matin.khajekhalili@gmail.com",
+            "homepage": "https://github.com/matin-kh73/"
+        }
+    ],
+    "require": {
+        "php": "^7.1|^8.0",
+        "cheprasov/php-redis-lock": "^1.0.3"
+    },
+    "require-dev": {
+        "orchestra/testbench" : "^6.0.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Mtkh\\IdempotencyHandler\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Mtkh\\IdempotencyHandler\\IdempotencyServiceProvider"
+            ]
+        }
+    }
+}
